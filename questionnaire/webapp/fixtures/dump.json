@@ -1,0 +1,180 @@
+[
+{
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "question": "\u0412\u043e\u043f\u0440\u043e\u0441_1",
+    "created_at": "2019-10-19T06:23:13.571Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "question": "\u0412\u043e\u043f\u0440\u043e\u0441_2",
+    "created_at": "2019-10-19T06:23:23.416Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "question": "\u0412\u043e\u043f\u0440\u043e\u0441_3",
+    "created_at": "2019-10-19T06:23:27.113Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "question": "\u0412\u043e\u043f\u0440\u043e\u0441_4",
+    "created_at": "2019-10-19T06:23:30.560Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "question": "\u0412\u043e\u043f\u0440\u043e\u0441_5",
+    "created_at": "2019-10-19T06:23:34.960Z"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 1,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_1",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 2,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_2",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 3,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_3",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 4,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_4",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 5,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_5",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 6,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_6",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 7,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_7",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 8,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_8",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 9,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_9",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 10,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_10",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 11,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_11",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 12,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_12",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 13,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_13",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 14,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_14",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 15,
+  "fields": {
+    "answer": "\u041e\u0442\u0432\u0435\u0442_15",
+    "poll": 5
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$8tWcXsl0CChh$u0JMAtZLIqV51QVA7mriNGh0HmKOZKaWIULwlnV+LGc=",
+    "last_login": "2019-10-19T06:20:48.380Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-10-19T06:19:04.982Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
