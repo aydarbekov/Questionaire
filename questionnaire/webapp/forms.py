@@ -9,6 +9,17 @@ class PollForm(forms.ModelForm):
         fields = ['question']
 
 
+class PollChoiseForm(forms.ModelForm):
+    class Meta:
+        model = Choice
+        fields = ['answer']
+
+
+class ChoiceForm(forms.ModelForm):
+    class Meta:
+        model = Choice
+        fields = ['answer']
+
 # class TypeForm(forms.ModelForm):
 #     class Meta:
 #         model = Type

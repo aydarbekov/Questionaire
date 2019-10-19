@@ -12,25 +12,23 @@
         <p>Created at: {{ poll.created_at }}</p>
    </div>
     <hr/>
-{#    <h3>Tasks:</h3>#}
-{#    {% for task in project.tasks.all %}#}
-{#        <div class="task">#}
-{#            <p><b>{{ task.description }}</b> created at {{ task.date }}</p>#}
-{#            <p>Status: {{ task.status }}</p>#}
-{#            <p>Type: {{ task.type }}</p>#}
-{#            <p class="projects-links">#}
+    <h3>Choises:</h3>
+    {% for choise in poll.choices.all %}
+        <div class="task">
+            <p><b>{{ choise.answer }}</b></p>
+            <p class="projects-links">
 {#                <a href="{% url 'task_view' task.pk %}">More</a>#}
-{#                <a href="{% url 'comment_update' comment.pk %}">Edit</a>#}
-{#                <a href="{% url 'comment_delete' comment.pk %}">Delete</a>#}
-{#            </p>#}
-{#        </div>#}
-{#    {% empty %}#}
-{#        <p>No tasks yet.</p>#}
-{#    {% endfor %}#}
-{#    {% if is_paginated %}#}
-{#        {% include 'partial/pagination.html' %}#}
-{#    {% endif %}#}
-{#    <form action="{% url 'project_task_create' project.pk %}" method="POST" id="add_task">#}
-{#        {% include 'partial/task_form.html' with button_text='Add' %}#}
-{#      </form>#}
+                <a href="{% url 'choice_update' choise.pk %}">Edit</a>
+                <a href="{% url 'choice_delete' choise.pk %}">Delete</a>
+            </p>
+        </div>
+    {% empty %}
+        <p>No choices yet.</p>
+    {% endfor %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    <form action="{% url 'poll_choice_create' poll.pk %}" method="POST" id="add_choice">
+        {% include 'partial/form.html' with button_text='Add' %}
+      </form>
 {% endblock %}
