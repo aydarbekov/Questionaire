@@ -1,7 +1,8 @@
 from django import forms
 from django.forms import widgets
 
-from webapp.models import Poll, Choice
+from webapp.models import Poll, Choice, Answer
+
 
 class PollForm(forms.ModelForm):
     class Meta:
@@ -19,6 +20,14 @@ class ChoiceForm(forms.ModelForm):
     class Meta:
         model = Choice
         fields = ['answer']
+
+
+# class AnswerForm(forms.ModelForm):
+#     class Meta:
+#         model = Answer
+#         exclude = ['created_at']
+#
+
 
 # class TypeForm(forms.ModelForm):
 #     class Meta:

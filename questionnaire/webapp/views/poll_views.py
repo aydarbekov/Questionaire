@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic.base import View
 
 from webapp.forms import PollForm
-from webapp.models import Poll
+from webapp.models import Poll, Answer, Choice
 # from webapp.forms import TaskForm, ProjectTaskForm, SimpleSearchForm
 # from webapp.views.base_views import MassDeleteView
 from django.db.models import Q
@@ -78,3 +78,31 @@ class PollDeleteView(DeleteView):
     model = Poll
     context_object_name = 'poll'
     success_url = reverse_lazy('index')
+
+
+class PollAnswerView(View):
+    def get(self, request, *args, **kwargs):
+        poll = get_object_or_404(Poll, pk=kwargs['pk'])
+        choices = poll.choices.all()
+        context = {
+            'poll': poll,
+            'choices': choices
+        }
+        return render(request, 'poll/answer.html', context)
+
+    def post(self, request, *args, **kwargs):
+        pk = request.POST['answer']
+        answer = get_object_or_404(Choice, pk=pk)
+
+        poll = get_object_or_404(Poll, pk=kwargs['pk'])
+        Answer.objects.create(answer=answer, poll=poll)
+        return redirect('index')
+
+
+    # template_name = 'poll/answer.html'
+    # model = Answer
+    # form_class = AnswerForm
+    #
+    # def get_success_url(self):
+    #     return reverse('poll_view', kwargs={'pk': self.object.pk})
+
