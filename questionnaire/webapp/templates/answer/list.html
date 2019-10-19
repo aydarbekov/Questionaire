@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 
-{% block menu %}
-    <li><a href="{% url 'poll_create' %}">Add Poll</a></li>
-
-    <li><a href="{% url 'answer_list' %}">Answers</a></li>
+{#{% block menu %}#}
+{#    <li><a href="{% url 'poll_create' %}">Add Poll</a></li>#}
+{#    <li><a href="{% url 'types_view' %}">Types</a></li>#}
 {#    <li><a href="{% url 'status_view' %}">Statuses</a></li>#}
 {#    <li><a href="{% url 'projects_view' %}">Projects</a></li>#}
-{% endblock %}
+{#{% endblock %}#}
 
 {% block content %}
 {#    {% include 'partial/simple_search.html' %}#}
-    <h1>Polls:</h1>
+    <h1>Answers:</h1>
     <hr/>
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
@@ -18,13 +17,9 @@
 {#    <form method="POST" action="{% url "mass_delete"  %}">#}
         {% csrf_token %}
 
-        {% for poll in polls %}
-            <h2><input type="checkbox" value="{{ poll.pk }}" id="{{ poll.pk }}" name="del" style="height: 20px; width: 20px"> {{ poll.question }}</h2>
-            <div>Create date: {{ poll.created_at }}</div>
-            <a href="{% url 'poll_view' poll.pk %}">More...</a>
-            <a href="{% url 'poll_update' poll.pk %}">Edit</a>
-            <a href="{% url 'poll_delete' poll.pk %}">Delete</a>
-            <a href="{% url 'poll_answer' poll.pk %}">Answer</a>
+        {% for answer in answers %}
+            <h2>{{ answer.poll }}</h2>
+            <div>Answer: {{ answer.answer }}</div>
 
             <hr/>
         {% endfor %}
